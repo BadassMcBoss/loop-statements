@@ -29,6 +29,10 @@ while count < len(genres):
 # For each genre, print out the track number and a message that the light show is ready.
 # Modify the loop to skip a genre if it's not suitable for the light show, for instance Classical genre.
 genres = ['Jazz', 'Rock', 'Hip-hop', 'Classical']
-
-for genre in range(len(genres)):
-    print(f"Track {genres + 1}: Light show is ready for {genre}!")
+counter = 1
+for i in range(len(genres)):
+    if genres[i] == 'Classical':
+        continue
+    else:
+        print(f"Track {counter}. {genres[i]} : Light show is ready for {genres[i]}!")
+    counter += 1
